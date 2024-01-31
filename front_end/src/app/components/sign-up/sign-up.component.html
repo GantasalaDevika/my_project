@@ -1,0 +1,89 @@
+<p>user-registration works!</p>
+<div class="container justify-content-center col-6">
+    <h2>Add new patient</h2>
+    <form [formGroup]="userFormGroup" (ngSubmit)="addUser()">
+        <!--User Name-->
+        <div class="mb-3">
+            <label class="form-label">User Name</label>
+            <input type="text" class="form-control" formControlName="userName" />
+            <div *ngIf="
+                  userFormGroup.controls['userName'].touched  || 
+                  userFormGroup.controls['userName'].dirty
+                  ">
+                <div class="alert alert-danger" *ngIf=" userFormGroup.controls['userName'].errors?.['required']">
+                    User Name is required</div>
+            </div>
+            <div class="alert alert-danger" *ngIf="userFormGroup.controls['userName'].errors?.['pattern']">
+                User Name is Invalid only Alphabets allowed</div>
+        </div>
+
+
+        <div class="mb-3">
+            <label class="form-label">User EmailId</label>
+            <input type="text" class="form-control" formControlName="userEmail" />
+            <div *ngIf="
+                  userFormGroup.controls['userEmail'].touched  || 
+                  userFormGroup.controls['userEmail'].dirty
+                  ">
+                <div class="alert alert-danger" *ngIf=" userFormGroup.controls['userEmail'].errors?.['required']">
+                    user-page Email is required</div>
+            </div>
+            <div class="alert alert-danger" *ngIf="userFormGroup.controls['userEmail'].errors?.['pattern']">
+                User Email is Invalid </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">User Gender</label>
+            <input type="text" class="form-control" formControlName="gender" />
+            <div *ngIf="
+                  userFormGroup.controls['gender'].touched  || 
+                  userFormGroup.controls['gender'].dirty
+                  ">
+                <div class="alert alert-danger" *ngIf=" userFormGroup.controls['gender'].errors?.['required']">
+                    User Gender is required</div>
+            </div>
+            <div class="alert alert-danger" *ngIf="userFormGroup.controls['gender'].errors?.['pattern']">
+                User Gender is Invalid </div>
+        </div>
+
+
+
+        <div class="mb-3">
+            <label class="form-label">User Password</label>
+            <input type="text" class="form-control" formControlName="userPassword" />
+            <div *ngIf="
+                  userFormGroup.controls['emailId'].touched  || 
+                  userFormGroup.controls['emailId'].dirty
+                  ">
+                <div class="alert alert-danger" *ngIf=" userFormGroup.controls['emailId'].errors?.['required']">
+                    User Password is required</div>
+            </div>
+            <div class="alert alert-danger" *ngIf="userFormGroup.controls['emailId'].errors?.['pattern']">
+                User Password is Invalid </div>
+        </div>
+
+
+
+
+
+        <div class="mb-3">
+            <label class="form-label">User Mobile</label>
+            <input type="text" class="form-control" formControlName="mobileNumber" />
+            <div *ngIf="
+                  userFormGroup.controls['userMobile'].touched  || 
+                  userFormGroup.controls['userMobile'].dirty
+                  ">
+                <div class="alert alert-danger" *ngIf=" userFormGroup.controls['userMobile'].errors?.['required']">
+                    User Mobile is required</div>
+            </div>
+            <div class="alert alert-danger" *ngIf="userFormGroup.controls['userMobile'].errors?.['pattern']">
+                User Mobile is Invalid only numbers allowed</div>
+        </div>
+
+
+        <div class="mb-3">
+            <input type="submit" value="Add Patient" class="btn btn-primary" />
+        </div>
+    </form>
+
+</div>

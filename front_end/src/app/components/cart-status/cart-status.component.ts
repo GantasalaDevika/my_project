@@ -21,6 +21,7 @@ export class CartStatusComponent {
     this.carServive.totalQuantity.subscribe((data) => {
 
       this.totalQuantity = data;
+      
     });
   }
   ngOnInit() {

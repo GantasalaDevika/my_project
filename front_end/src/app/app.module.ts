@@ -12,15 +12,12 @@ import { LaptopDetailsComponent } from './components/laptop-details/laptop-detai
 import { CartDetailsComponent } from './components/cart-details/cart-details.component';
 import { CartStatusComponent } from './components/cart-status/cart-status.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
-import { LoginComponent } from './components/login/login.component';
-import { AdminLoginComponent } from './components/admin-login/admin-login.component';
-import { UserLoginComponent } from './components/user-login/user-login.component';
-import { HomePageComponent } from './components/home-page/home-page.component';
-
-
-
-import { AboutUsComponent } from './components/about-us/about-us.component';
-import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { SigninComponent } from './components/signin/signin.component';
+import { HomepageComponent } from './components/homepage/homepage.component';
+import { UserpageComponent } from './components/userpage/userpage.component';
+import { ContactusComponent } from './components/contactus/contactus.component';
+import { AboutusComponent } from './components/aboutus/aboutus.component';
 
 
 @NgModule({
@@ -33,17 +30,13 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
     CartDetailsComponent,
     CartStatusComponent,
     CheckoutComponent,
-    LoginComponent,
-
-    AdminLoginComponent,
-    UserLoginComponent,
-    HomePageComponent,
+    SignupComponent,
+    SigninComponent,
+    HomepageComponent,
+    UserpageComponent,
+    ContactusComponent,
+    AboutusComponent,
    
-    AboutUsComponent,
-    SignUpComponent,
-
-
-
   ],
   imports: [
     BrowserModule,

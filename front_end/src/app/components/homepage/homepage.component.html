@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary" >
+ 
+  <div class="container-fluid"  style="background-color: rgb(9, 255, 0); border-radius: 200px; height: 50px;">
+    <div> <a class="navbar-brand" href="#" > <b>Laptop Rental Service  </b> </a>
+      <a class="navbar-brand" routerLink="/aboutus"> About us</a>
+      <a class="navbar-brand" routerLink="/contactus">Contact us <i class="fa-solid fa-phone-volume fa-shake"></i></a>
+    </div>
+
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="bar">
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/signup">
+              <p>SignUp</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/signin">
+              <p>Signin</p>
+            </a>
+          </li>
+         
+         
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<router-outlet></router-outlet>

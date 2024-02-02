@@ -1,3 +1,27 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <app-laptop-category-menu></app-laptop-category-menu>
+        <app-search></app-search>
+      </ul>
+      <ul>
+        <app-cart-status></app-cart-status>
+      </ul>
+
+
+    </div>
+  </div>
+</nav>
+
+
+
 <div class="container mt-5 mb-5">
   <div class="row">
     <div *ngFor="let laptop of laptops" class="col-4">
@@ -5,7 +29,7 @@
         <img [src]="laptop.imageUrl" class="card-img-top" alt="{{ laptop.laptopName }} Image" style="width: 150px;">
         <div class="card-body">
           <h5 class="card-title">{{ laptop.laptopName }}</h5>
-          <p class="card-text">{{ laptop.laptopPrice }}</p>
+          <p class="card-text">{{ laptop.laptopPrice | currency : 'INR' }}</p>
           <p class="card-text">{{laptop.laptopVersion}} </p>
           <p class="card-text">{{laptop.laptopColor}} </p>
 
